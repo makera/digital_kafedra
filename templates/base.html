@@ -1,0 +1,42 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>{% block title %} - Job Board{% endblock %}</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- <link rel="manifest" href="site.webmanifest"> -->
+  <link rel="shortcut icon" type="image/x-icon" href="/static/img/favicon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <!-- CSS here -->
+  {% include 'include/css.html' %}
+</head>
+
+<body>
+<!--[if lte IE 9]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade
+  your browser</a> to improve your experience and security.</p>
+<![endif]-->
+
+{% include 'include/header.html' %}
+
+{% block main %}
+
+{% endblock %}
+
+{% include 'include/footer.html' %}
+
+<!-- link that opens popup -->
+<!-- JS here -->
+{% include 'include/js.html' %}
+
+{% block extra_js %}
+
+{% endblock %}
+</body>
+
+</html>
