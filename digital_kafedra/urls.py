@@ -16,7 +16,7 @@ Including another URLconf
 import datetime
 
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from django.views.generic import TemplateView
 
 jobs = [
@@ -44,6 +44,6 @@ urlpatterns = [
         'jobs': jobs,
         'username': 'admin'
     })),
-    path('blog/', TemplateView.as_view(template_name='blog.html', extra_context={'bradcam': 'blog'})),
     path('jobs/', TemplateView.as_view(template_name='jobs.html', extra_context={'bradcam': '4536+ Jobs Available'})),
+    path('blog/', include('blog.urls')),
 ]
